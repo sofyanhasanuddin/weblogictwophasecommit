@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test Two Phase Commit</title>
+</head>
+	<script src="resources/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript">
+	
+		function save() {
+			var datastring = $("#testForm").serialize();
+			$.ajax({
+			    type: "POST",
+			    url: "save",
+			    data: datastring,
+			    dataType: "json",
+			    success: function(data) {
+			        alert( data.message );
+			    },
+			    error: function(e) {
+			    	alert( e );
+			    }
+			});
+		}
+	
+	</script>
+<body>
+	<form id="testForm">
+		<table>
+			<tr>
+				<td>Product Name</td>
+				<td><input type="text" name="productname"/></td>
+			</tr>
+			<tr>
+				<td>Category Name ( max character : 5 )</td>
+				<td><input type="text" name="categoryname"/></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="button" onclick="save();" value="save" /></td>
+			</tr>
+		</table>
+	</form>
+	
+</body>
+</html>
