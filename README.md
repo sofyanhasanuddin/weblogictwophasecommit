@@ -1,4 +1,4 @@
-# Weblogic two phase commit using Spring boot data jpa
+# Weblogic Two Phase Commit Using Spring Boot Data JPA
 weblogic two phase commit using spring boot data jpa
 
 # How to run
